@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactModel;
+use App\Services\FirstService;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -31,21 +32,10 @@ class MainController extends Controller
         return view('activities');
     }
 
-    public function check(Request $request) {
-        $valid = $request->validate([
-            'email' => 'required|min:4|max:100',
-            'subject' => 'required|min:10|max:100',
-            'message'=> 'required|min:10|max:500',
-        ]);
-
-        $contact = new ContactModel();
-        $contact->email = $request->input('email');
-        $contact->subject = $request->input('subject');
-        $contact->message = $request->input('message');
-
-        $contact->save();
-
-        return redirect()->route('contacts');
+    public function check(Request $request, FirstService $firstService) {
+        $firstService->logic($request);
+        return back()->with('success', 'Сообщение отправлено!');
     }
+
 
 }

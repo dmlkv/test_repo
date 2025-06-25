@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\BlogController;
 
 Route::get('/', [MainController::class, 'home'])->name('home');
 
@@ -20,3 +21,5 @@ Route::post('/contacs/check', [MainController::class, 'check']);
 Route::get('/user/{id}/{name}', function ($id, $name) {
     return 'ID: '. $id . '. Name: ' . $name;
 });
+
+Route::get('/blog', [BlogController::class, 'index']);

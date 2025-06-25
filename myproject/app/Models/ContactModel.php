@@ -7,4 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class ContactModel extends Model
 {
     public $timestamps = false;
+
+    protected $fillable = [
+        'email',
+        'subject',
+        'message',
+    ];
 }

@@ -24,7 +24,7 @@
                         @if($errors->any())
                             <div class="alert-danger">
                                 <ul>
-                                    @foreach ($errors ->all() as $error )
+                                    @foreach ($errors->all() as $error)
                                         <li>{{$error}}</li>
                                     @endforeach
                                 </ul>
@@ -40,6 +40,11 @@
                         <div class="form__inner-under">
                             <button class="contacts__btn" type="submit">send</button>
                         </div>
+                        @if(session('success'))
+                            <div style="color: green; fontsize: 24px; margin:30px;">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                     </form>
                 </div>
                 <div class="form__address">

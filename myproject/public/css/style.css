@@ -561,8 +561,8 @@ header.no-background {
 }
 
 .textarea.contacts__title-item {
-   resize: none;
-   height: 80px;
+    resize: none;
+    height: 80px;
 }
 
 .contacts__btn {
@@ -591,7 +591,7 @@ header.no-background {
     font-size: 44px;
 }
 
-.text__under a{
+.text__under a {
     background-color: #2B2A29;
     color: #fff;
     padding: 0px 10px;
@@ -600,7 +600,7 @@ header.no-background {
     transition: background-color .5s;
 }
 
-.text__under a:hover{
+.text__under a:hover {
     background-color: #fff;
     color: #2B2A29;
     padding: 0px 10px;
@@ -725,6 +725,39 @@ header.no-background {
     margin: 0px 40px;
     border: 1px solid #2B2A29;
     border-radius: 30px;
+}
+
+.blog {
+    margin-bottom: 50px;
+}
+
+.blog_main-title {
+    display: flex;
+    font-size: 54px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: #2B2A29;
+    border: #2B2A29 solid 1px;
+    color: #fff;
+    width: 480px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.blog_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog_inner h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.blog_inner p {
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
 
